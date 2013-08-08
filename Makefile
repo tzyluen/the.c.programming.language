@@ -13,6 +13,8 @@ chapter1:
 	$(CC) $(CFLAGS) chap1/exe1.6.c -o exe1.6
 	$(CC) $(CFLAGS) chap1/exe1.8.c -o exe1.8
 	$(CC) $(CFLAGS) chap1/exe1.9.c -o exe1.9
+	$(CC) $(CFLAGS) chap1/exe1.9.c -o exe1.9
+	$(CC) $(CFLAGS) chap1/exe1.10.c -o exe1.10
 chapter2:
 	$(CC) $(CFLAGS) chap2/exe2.1.c -o exe2.1
 clean:
@@ -26,5 +28,6 @@ clean:
 	rm -f exe1.6
 	rm -f exe1.8
 	rm -f exe1.9
+	rm -f exe1.10
 	rm -f exe2.1
 	rm -fr *.dSYM
