@@ -10,8 +10,8 @@ int main(int argc, char *argv[])
         ndigit[i] = 0;
 
     while ((c = getchar()) != EOF)
-        if (c >= '0' && c <= '9')
-            ++ndigit[c-'0'];    // 0-0=0, 1-0=1, 2-0=2; therefore always consecutive incresing values.
+        if (c >= '0' && c <= '9')   // '0' ascii is 30
+            ++ndigit[c-'0'];        // '0'-'0'=0, '1'-'0'=1; therefore always consecutive incresing values.
         else if (c == ' ' || c == '\n' || c == '\t')
             ++nwhite;
         else
