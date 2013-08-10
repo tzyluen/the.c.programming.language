@@ -13,6 +13,7 @@ chapter1:
 	$(CC) $(CFLAGS) chap1/example1.5.4.c -o example1.5.4
 	$(CC) $(CFLAGS) chap1/example1.6.c -o example1.6
 	$(CC) $(CFLAGS) chap1/example1.7.c -o example1.7
+	$(CC) $(CFLAGS) chap1/example1.8.c -o example1.8
 	$(CC) $(CFLAGS) chap1/exe1.6.c -o exe1.6
 	$(CC) $(CFLAGS) chap1/exe1.8.c -o exe1.8
 	$(CC) $(CFLAGS) chap1/exe1.9.c -o exe1.9
@@ -32,6 +33,7 @@ clean:
 	rm -f example1.5.4
 	rm -f example1.6
 	rm -f example1.7
+	rm -f example1.8
 	rm -f exe1.4
 	rm -f exe1.6
 	rm -f exe1.8
