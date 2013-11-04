@@ -26,8 +26,8 @@ chapter1:
 	$(CC) $(CFLAGS) chap1/exe1.17.c -o exe1.17
 	$(CC) $(CFLAGS) chap1/exe1.18_a.c -o exe1.18
 	$(CC) $(CFLAGS) chap1/exe1.19.c -o exe1.19
-	$(CC) $(CFLAGS) chap1/exe1.19.c -o exe1.20
-	$(CC) $(CFLAGS) chap1/exe1.19.c -o exe1.23
+	$(CC) $(CFLAGS) chap1/exe1.20.c -o exe1.20
+	$(CC) $(CFLAGS) chap1/exe1.23.c -o exe1.23
 chapter2:
 	$(CC) $(CFLAGS) chap2/exe2.1.c -o exe2.1
 clean:
