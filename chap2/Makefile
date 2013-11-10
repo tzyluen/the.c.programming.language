@@ -11,6 +11,7 @@ default:
 	$(CC) $(CFLAGS) example2.5.c -o example2.5
 	$(CC) $(CFLAGS) example2.7.c -o example2.7
 	$(CC) $(CFLAGS) example2.8.c -o example2.8
+	$(CC) $(CFLAGS) example2.9.c -o example2.9
 	$(CC) $(CFLAGS) base.c -o base
 clean:
 	rm -f a.out
@@ -18,6 +19,7 @@ clean:
 	rm -f example2.5
 	rm -f example2.7
 	rm -f example2.8
+	rm -f example2.9
 	rm -f exe2.1
 	rm -f exe2.2
 	rm -f exe2.3
