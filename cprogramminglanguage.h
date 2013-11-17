@@ -1,19 +1,19 @@
 #include <stdio.h>
 #include <ctype.h>
 
-int getline(char s[], int lim)
-{
-    int c, i;
-
-    for (i = 0; i < lim-1 && (c=getchar())!= EOF && c!='\n'; ++i)
-        s[i] = c;
-    if (c == '\n') {
-        s[i] = c;
-        ++i;
-    }
-    s[i] = '\0';    /* does not count the terminate char */
-    return i;
-}
+//int getline(char s[], int lim)
+//{
+//    int c, i;
+//
+//    for (i = 0; i < lim-1 && (c=getchar())!= EOF && c!='\n'; ++i)
+//        s[i] = c;
+//    if (c == '\n') {
+//        s[i] = c;
+//        ++i;
+//    }
+//    s[i] = '\0';    /* does not count the terminate char */
+//    return i;
+//}
 
 
 void reverse(char s[], int len)
@@ -78,4 +78,16 @@ double atof(char *s)
 int atoi(char *s)
 {
     return (int) atof(s);
+}
+
+
+/* showbits: shows character in readable binary */
+void showbits(char c, char b[])
+{
+    int i, j, _b;
+    for (j = 0, i = 7; i >= 0; --i) {
+        _b = (c & (1 << i)) ? '1' : '0';
+        b[j++] = _b;
+        printf("%c", _b);
+    } printf(": %d\n", c);
 }

@@ -1,38 +1,30 @@
 #include <stdio.h>
 
-void char2bin(char b[], char c);
-void printbin(char b[]);
+void showbits(char c, char b[]);
 
 int main(int argc, char *argv[])
 {
-    char b[7];
     int a;
-    for (a = 'a'; a <= 'z'; ++a) {
-        printf("%c -> ", a);
-        char2bin(b, a);
-        printbin(b);
+    char b[7];
+    for (a = '0'; a <= '~'; ++a) {
+        showbits(a, b);
     }
 
-    int n = 7;
-    char2bin(b, n);
-    printbin(b);
-
-    n = n & 0177;
-    char2bin(b, n);
-    printbin(b);
+    int i;
+    for (i = 0; i < 100; ++i) {
+        showbits(i, b);
+    }
     
     return 0;
 }
 
 
-void showbits(char b[])
+void showbits(char c, char b[])
 {
-    int i, j;
+    int i, j, _b;
     for (j = 0, i = 7; i >= 0; --i) {
-        b[j++] = (c & (1 << i)) ? '1' : '0';
-    }
-
-    for (i = 0; b[i] != '\0'; ++i) {
-        printf("%c", b[i]);
-    } printf("\n");
+        _b = (c & (1 << i)) ? '1' : '0';
+        b[j++] = _b;
+        printf("%c", _b);
+    } printf(": %d\n", c);
 }

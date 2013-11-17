@@ -12,6 +12,7 @@ default:
 	$(CC) $(CFLAGS) example2.7.c -o example2.7
 	$(CC) $(CFLAGS) example2.8.c -o example2.8
 	$(CC) $(CFLAGS) example2.9.c -o example2.9
+	$(CC) $(CFLAGS) bits.c -o bits -lm
 	$(CC) $(CFLAGS) base.c -o base
 clean:
 	rm -f a.out
@@ -26,3 +27,4 @@ clean:
 	rm -f exe2.4
 	rm -f exe2.5
 	rm -f base
+	rm -f bits 
