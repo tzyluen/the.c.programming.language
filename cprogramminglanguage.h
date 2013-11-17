@@ -82,12 +82,14 @@ int atoi(char *s)
 
 
 /* showbits: shows character in readable binary */
-void showbits(char c, char b[])
+void showbits(unsigned char c, char b[])
 {
     int i, j, _b;
     for (j = 0, i = 7; i >= 0; --i) {
         _b = (c & (1 << i)) ? '1' : '0';
         b[j++] = _b;
         printf("%c", _b);
-    } printf(": %d\n", c);
+    }
+    
+    printf("-> %u\n", c);
 }

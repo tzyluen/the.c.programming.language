@@ -14,6 +14,7 @@ default:
 	$(CC) $(CFLAGS) example2.9.c -o example2.9
 	$(CC) $(CFLAGS) bits.c -o bits -lm
 	$(CC) $(CFLAGS) base.c -o base
+	$(CC) $(CFLAGS) recur.c -o recur
 clean:
 	rm -f a.out
 	rm -fr *.dSYM
@@ -28,3 +29,4 @@ clean:
 	rm -f exe2.5
 	rm -f base
 	rm -f bits 
+	rm -f recur
