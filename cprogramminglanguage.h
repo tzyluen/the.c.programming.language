@@ -93,3 +93,58 @@ void showbits(unsigned char c, char b[])
     
     printf("-> %u\n", c);
 }
+
+
+/* showbit: enhanced version of showbits(unsigned char c, char b[]) */
+void showbit(int n, char *b)
+{
+    int i, j, _b;
+    for (j = 0, i = 32; i >= 0; --i) {
+        _b = (n & (1 << i)) ? '1' : '0';
+        b[j++] = _b;
+        printf("%c", _b);
+    }
+
+    printf("-> %u\n", n);
+}
+
+
+/* binsearch: find x in v[0] <=  v[1] <= ... <= v[n-1] */
+int binsearch(int x, int v[], int n)
+{
+    int low, high, mid;
+
+    low = 0;
+    high = n - 1;
+    while (low <= high) {
+        mid = (low + high) / 2;
+        if (x < v[mid])
+            high = mid - 1;
+        else if (x > v[mid])
+            low = mid + 1;
+        else    /* found match */
+            return mid;
+    }
+
+    return -1;
+}
+
+
+/* binsearch2: exe3.1.c */
+int binsearch2(int x, int v[], int n)
+{
+    int low, high, mid;
+    low = 0;
+    high = n - 1;
+
+    mid = (low + high) / 2;
+    while (low <= high && x != v[mid]) {
+        if (x < v[mid])
+            high = mid - 1;
+        else
+            low = mid + 1;
+        mid = (low + high) / 2;
+    }
+
+    return (x == v[mid]) ? mid : -1;
+}
