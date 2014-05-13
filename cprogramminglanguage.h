@@ -1,3 +1,6 @@
+#ifndef CPROGRAMMINGLANGUAGE_H
+#define CPROGRAMMINGLANGUAGE_H
+
 #include <stdio.h>
 #include <ctype.h>
 
@@ -148,3 +151,5 @@ int binsearch2(int x, int v[], int n)
 
     return (x == v[mid]) ? mid : -1;
 }
+
+#endif
